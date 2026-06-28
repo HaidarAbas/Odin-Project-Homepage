@@ -1,4 +1,5 @@
-// REMINDER!! appened script:deploy in package.json with branch name
+// REMINDER!! append script:deploy in package.json with branch name
+import "./styles.css"
 
 function generateRandomColor() {
     const r = Math.floor(Math.random() * 256);
@@ -45,7 +46,7 @@ function generateSVGPlaceholder() {
 const pss = document.getElementsByClassName("project-screenshot");
 
 for (const shot of pss) {
-    if (shot.hasAttribute("src") && shot.getAttribute("src") === "") {
+    if (shot.hasAttribute("src") && shot.getAttribute("src") === "#") {
         shot.replaceWith(generateSVGPlaceholder());
     }
 }
